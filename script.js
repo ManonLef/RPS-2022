@@ -14,7 +14,8 @@ function computerPlay() {
 }
 
 function playRound(comp, play) {
-
+    console.log(computerSelection);
+    console.log(playerSelection);
     if (comp === play) {
         return("it's a tie");
     } else if ((comp === "rock" && play === "scissors") || (comp === "paper" && play === "rock") || (comp === "scissors" && play === "paper")) {
