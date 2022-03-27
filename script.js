@@ -1,1 +1,2 @@
-console.log("hello world");
+let playerChoice = prompt("weapon?").toLowerCase();
+
