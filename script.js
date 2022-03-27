@@ -13,17 +13,18 @@ function computerPlay() {
     }
 }
 
-function playRound(comp, play) {
+function playRound(computer, player) {
     console.log(computerSelection);
     console.log(playerSelection);
-    if (comp === play) {
-        return("it's a tie");
-    } else if ((comp === "rock" && play === "scissors") || (comp === "paper" && play === "rock") || (comp === "scissors" && play === "paper")) {
-        return("computer wins");
+    if (computer === player) {
+        return "it's a tie";
+    } else if ((computer === "rock" && player === "scissors") 
+            || (computer === "paper" && player === "rock") 
+            || (computer === "scissors" && player === "paper")) {
+        return "computer wins";
     } else {
-        return("player wins");
-    }
-        
+        return "player wins";
+    }       
 }
 
 console.log(playRound(computerSelection, playerSelection));
