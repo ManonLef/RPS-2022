@@ -1,5 +1,5 @@
 let playerSelection = prompt("weapon?").toLowerCase();
-let computerSelection;
+let computerSelection = computerPlay();
 
 function computerPlay() {
     let random = Math.floor(Math.random()*3)+1;
@@ -13,7 +13,16 @@ function computerPlay() {
     }
 }
 
+function playRound(comp, play) {
 
+    if (comp === play) {
+        return("it's a tie");
+    } else if ((comp === "rock" && play === "scissors") || (comp === "paper" && play === "rock") || (comp === "scissors" && play === "paper")) {
+        return("computer wins");
+    } else {
+        return("player wins");
+    }
+        
+}
 
-console.log(computerPlay(computerSelection));
-console.log(playerSelection);
+console.log(playRound(computerSelection, playerSelection));
