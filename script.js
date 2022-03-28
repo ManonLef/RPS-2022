@@ -1,7 +1,7 @@
 let computerScore = 0;
 let playerScore = 0;
 
-alert("cancel the prompt, open console and refresh to play");
+alert("cancel the first weapon prompt, open console and refresh to play");
 
 function computerPlay() {
     let random = Math.floor(Math.random()*3)+1;
