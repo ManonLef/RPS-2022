@@ -3,16 +3,9 @@ let playerScore = 0;
 
 alert("cancel the first weapon prompt, open console and refresh to play");
 
-function computerPlay() {
-    let random = Math.floor(Math.random()*3)+1;
-    
-    if (random === 1) {
-        return "rock";
-    } else if (random === 2) {
-        return "paper";
-    } else {
-        return "scissors";
-    }
+function computerPlay(randomWeapon) {
+    randomWeapon = ["rock", "paper", "scissors"];
+    return (randomWeapon[Math.floor(Math.random() * randomWeapon.length)]);
 }
 
 function playRound(computerChoice, playerChoice) {
