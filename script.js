@@ -22,7 +22,7 @@ function playRound(computerChoice, playerChoice) {
             return "you win, " + playerChoice + " beats " + computerChoice;
         }       
     } else {
-        return "Pick again, but this time only 'rock, 'paper' or 'scissors'";
+        return "Pick again, but this time only 'rock', 'paper' or 'scissors'";
     }
 }
 
