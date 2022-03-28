@@ -50,4 +50,4 @@ function game() {
 }
 
 game();
-//console.log(playRound(computerSelection, playerSelection));
+
