@@ -1,5 +1,4 @@
-let playerSelection = prompt("weapon?").toLowerCase();
-let computerSelection = computerPlay();
+
 
 function computerPlay() {
     let random = Math.floor(Math.random()*3)+1;
@@ -26,7 +25,20 @@ function playRound(computerChoice, playerChoice) {
         }       
     } else {
         return "Pick again, but this time only 'rock, 'paper' or 'scissors'";
-        //In the loop this option should start a new playerSelection prompt.
     }
 }
-console.log(playRound(computerSelection, playerSelection));
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        if (i < 5) {
+            let playerSelection = prompt("weapon?").toLowerCase();
+            let computerSelection = computerPlay();
+            console.log(playRound(computerSelection, playerSelection));
+        } else {
+            return "5 rounds played";
+        }
+    }
+}
+
+game();
+//console.log(playRound(computerSelection, playerSelection));
