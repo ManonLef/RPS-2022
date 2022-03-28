@@ -13,14 +13,14 @@ function computerPlay() {
     }
 }
 
-function playRound(computer, player) {
+function playRound(computerChoice, playerChoice) {
     console.log(computerSelection);
     console.log(playerSelection);
-    if (computer === player) {
+    if (computerChoice === playerChoice) {
         return "it's a tie";
-    } else if ((computer === "rock" && player === "scissors") 
-            || (computer === "paper" && player === "rock") 
-            || (computer === "scissors" && player === "paper")) {
+    } else if ((computerChoice === "rock" && playerChoice === "scissors") 
+            || (computerChoice === "paper" && playerChoice === "rock") 
+            || (computerChoice === "scissors" && playerChoice === "paper")) {
         return "computer wins";
     } else {
         return "player wins";
