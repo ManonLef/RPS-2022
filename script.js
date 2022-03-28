@@ -15,8 +15,6 @@ function computerPlay() {
 
 function playRound(computerChoice, playerChoice) {
     if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
-        console.log(computerSelection);
-        console.log(playerSelection);
         if (computerChoice === playerChoice) {
             return "it's a tie, you both picked " + playerChoice;
         } else if ((computerChoice === "rock" && playerChoice === "scissors") 
