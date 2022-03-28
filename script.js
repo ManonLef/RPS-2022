@@ -1,4 +1,5 @@
-
+let computerScore = 0;
+let playerScore = 0;
 
 function computerPlay() {
     let random = Math.floor(Math.random()*3)+1;
@@ -19,8 +20,10 @@ function playRound(computerChoice, playerChoice) {
         } else if ((computerChoice === "rock" && playerChoice === "scissors") 
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
+            ++computerScore
             return "computer wins, " + computerChoice + " beats " + playerChoice;
         } else {
+            ++playerScore
             return "you win, " + playerChoice + " beats " + computerChoice;
         }       
     } else {
@@ -29,13 +32,17 @@ function playRound(computerChoice, playerChoice) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i <= 5; i++) {
         if (i < 5) {
             let playerSelection = prompt("weapon?").toLowerCase();
             let computerSelection = computerPlay();
             console.log(playRound(computerSelection, playerSelection));
         } else {
-            return "5 rounds played";
+            if (computerScore > playerScore) {
+                console.log("You lost, Computer score is " + computerScore + " You scored " + playerScore)
+            } else {
+                console.log("You win, Computer score is " + computerScore + " You scored " + playerScore)
+            }
         }
     }
 }
