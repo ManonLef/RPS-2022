@@ -29,7 +29,7 @@ function playRound(computerChoice, playerChoice) {
 function game() {
     for (let i = 0; i <= 5; i++) {
         if (i < 5) {
-            let playerSelection = prompt("weapon?").toLowerCase();
+            let playerSelection = prompt("What will be your weapon of choice?\nRock, Paper or Scissors?").toLowerCase();
             let computerSelection = computerPlay();
             console.log(playRound(computerSelection, playerSelection));
         } else {
