@@ -14,17 +14,21 @@ function computerPlay() {
 }
 
 function playRound(computerChoice, playerChoice) {
-    console.log(computerSelection);
-    console.log(playerSelection);
-    if (computerChoice === playerChoice) {
-        return "it's a tie, you both picked " + playerChoice;
-    } else if ((computerChoice === "rock" && playerChoice === "scissors") 
-            || (computerChoice === "paper" && playerChoice === "rock") 
-            || (computerChoice === "scissors" && playerChoice === "paper")) {
-        return "computer wins, " + computerChoice + " beats " + playerChoice;
+    if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
+        console.log(computerSelection);
+        console.log(playerSelection);
+        if (computerChoice === playerChoice) {
+            return "it's a tie, you both picked " + playerChoice;
+        } else if ((computerChoice === "rock" && playerChoice === "scissors") 
+                || (computerChoice === "paper" && playerChoice === "rock") 
+                || (computerChoice === "scissors" && playerChoice === "paper")) {
+            return "computer wins, " + computerChoice + " beats " + playerChoice;
+        } else {
+            return "you win, " + playerChoice + " beats " + computerChoice;
+        }       
     } else {
-        return "you win, " + playerChoice + " beats " + computerChoice;
-    }       
+        return "Pick again, but this time only 'rock, 'paper' or 'scissors'";
+        //In the loop this option should start a new playerSelection prompt.
+    }
 }
-
 console.log(playRound(computerSelection, playerSelection));
