@@ -17,11 +17,11 @@ function playRound(computerChoice, playerChoice) {
     console.log(computerSelection);
     console.log(playerSelection);
     if (computerChoice === playerChoice) {
-        return "it's a tie";
+        return "it's a tie, you both picked " + playerChoice;
     } else if ((computerChoice === "rock" && playerChoice === "scissors") 
             || (computerChoice === "paper" && playerChoice === "rock") 
             || (computerChoice === "scissors" && playerChoice === "paper")) {
-        return "computer wins";
+        return "computer wins, " + computerChoice + " beats " + playerChoice;
     } else {
         return "player wins";
     }       
