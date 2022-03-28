@@ -23,7 +23,7 @@ function playRound(computerChoice, playerChoice) {
             || (computerChoice === "scissors" && playerChoice === "paper")) {
         return "computer wins, " + computerChoice + " beats " + playerChoice;
     } else {
-        return "player wins";
+        return "you win, " + playerChoice + " beats " + computerChoice;
     }       
 }
 
