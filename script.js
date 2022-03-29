@@ -9,29 +9,34 @@ function computerPlay(weaponOptions) {
 }
 
 function playRound(computerChoice, playerChoice) {
-    if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
+    
         if (computerChoice === playerChoice) {
             return "it's a tie, you both picked " + playerChoice;
         } else if ((computerChoice === "rock" && playerChoice === "scissors") 
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
-            ++computerScore
+            computerScore++;
             return "computer wins, " + computerChoice + " beats " + playerChoice;
         } else {
-            ++playerScore
+            playerScore++;
             return "you win, " + playerChoice + " beats " + computerChoice;
         }       
-    } else {
-        return "Pick again, but this time only 'rock', 'paper' or 'scissors'";
-    }
-}
+    } 
+
 
 function game() {
     for (let i = 0; i <= 5; i++) {
         if (i < 5) {
             let playerSelection = prompt("What will be your weapon of choice?\nRock, Paper or Scissors?").toLowerCase();
             let computerSelection = computerPlay();
-            console.log(playRound(computerSelection, playerSelection));
+
+            if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
+                console.log(playRound(computerSelection, playerSelection));
+            } else {
+                i--;
+                console.log( "Pick again, but this time only 'rock', 'paper' or 'scissors'");
+                continue;
+            }
         } else {
             if (computerScore > playerScore) {
                 console.log("You lost, Computer score is " + computerScore + " You scored " + playerScore)
