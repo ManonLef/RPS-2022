@@ -9,19 +9,18 @@ function computerPlay(weaponOptions) {
 }
 
 function playRound(computerChoice, playerChoice) {
-    
-        if (computerChoice === playerChoice) {
-            return "it's a tie, you both picked " + playerChoice;
-        } else if ((computerChoice === "rock" && playerChoice === "scissors") 
-                || (computerChoice === "paper" && playerChoice === "rock") 
-                || (computerChoice === "scissors" && playerChoice === "paper")) {
-            computerScore++;
-            return "computer wins, " + computerChoice + " beats " + playerChoice;
-        } else {
-            playerScore++;
-            return "you win, " + playerChoice + " beats " + computerChoice;
-        }       
-    } 
+    if (computerChoice === playerChoice) {
+        return "it's a tie, you both picked " + playerChoice;
+    } else if ((computerChoice === "rock" && playerChoice === "scissors") 
+            || (computerChoice === "paper" && playerChoice === "rock") 
+            || (computerChoice === "scissors" && playerChoice === "paper")) {
+        computerScore++;
+        return "computer wins, " + computerChoice + " beats " + playerChoice;
+    } else {
+        playerScore++;
+        return "you win, " + playerChoice + " beats " + computerChoice;
+    }       
+} 
 
 
 function game() {
@@ -30,7 +29,9 @@ function game() {
             let playerSelection = prompt("What will be your weapon of choice?\nRock, Paper or Scissors?").toLowerCase();
             let computerSelection = computerPlay();
 
-            if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors") {
+            if (playerSelection === "rock" 
+                || playerSelection === "paper" 
+                || playerSelection === "scissors") {
                 console.log(playRound(computerSelection, playerSelection));
             } else {
                 i--;
