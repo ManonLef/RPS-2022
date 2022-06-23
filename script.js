@@ -22,6 +22,14 @@ function playRound(computerChoice, playerChoice) {
     }       
 } 
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let playerSelection = button.id;
+        let computerSelection = computerPlay();
+        console.log(playRound(computerSelection, playerSelection));
+    });
+});
 
 // function game() {
 //     for (let i = 0; i <= 5; i++) {
