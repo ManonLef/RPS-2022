@@ -1,6 +1,11 @@
 let computerScore = 0;
 let playerScore = 0;
 
+const result = document.querySelector('#result');
+// adds a div with class 'text' to the 'results div:
+const text = document.createElement('div');
+text.classList.add('text');
+
 
 function computerPlay(weaponOptions) {
     weaponOptions = ["rock", "paper", "scissors"];
@@ -8,9 +13,6 @@ function computerPlay(weaponOptions) {
 }
 
 function playRound(computerChoice, playerChoice) {
-    const result = document.querySelector('#result');
-    const text = document.createElement('div');
-    text.classList.add('text');
 
     if (computerChoice === playerChoice) {
         text.textContent = "It's a tie, you both picked " + playerChoice;
@@ -31,6 +33,7 @@ function playRound(computerChoice, playerChoice) {
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+        result.classList.remove('text'); //clears previous round's result if applicable
         let playerSelection = button.id;
         let computerSelection = computerPlay();
         playRound(computerSelection, playerSelection);
