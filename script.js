@@ -10,6 +10,7 @@ const score = document.createElement('div');
 score.classList.add('score');
 
 result.appendChild(text);
+result.appendChild(score);
 
 function computerPlay(weaponOptions) {
     weaponOptions = ["rock", "paper", "scissors"];
@@ -29,7 +30,7 @@ function playRound(computerChoice, playerChoice) {
         playerScore++;
         text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
     }
-    
+    score.textContent = "The current score is " + computerScore + " for computer and " + playerScore + " for you."
 } 
 
 const buttons = document.querySelectorAll('button');
