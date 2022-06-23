@@ -9,6 +9,8 @@ text.classList.add('text');
 const score = document.createElement('div');
 score.classList.add('score');
 
+result.appendChild(text);
+
 function computerPlay(weaponOptions) {
     weaponOptions = ["rock", "paper", "scissors"];
     return (weaponOptions[Math.floor(Math.random() * weaponOptions.length)]);
@@ -27,13 +29,12 @@ function playRound(computerChoice, playerChoice) {
         playerScore++;
         text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
     }
-    result.appendChild(text);
+    
 } 
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        result.classList.remove('text'); //clears previous round's result if applicable
         let playerSelection = button.id;
         let computerSelection = computerPlay();
         playRound(computerSelection, playerSelection);
