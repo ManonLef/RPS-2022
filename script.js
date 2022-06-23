@@ -1,7 +1,6 @@
 let computerScore = 0;
 let playerScore = 0;
 
-alert("cancel the first weapon prompt, open console and refresh to play");
 
 function computerPlay(weaponOptions) {
     weaponOptions = ["rock", "paper", "scissors"];
@@ -9,16 +8,23 @@ function computerPlay(weaponOptions) {
 }
 
 function playRound(computerChoice, playerChoice) {
+    const result = document.querySelector('#result');
+    const text = document.createElement('div');
+    text.classList.add('text');
+
     if (computerChoice === playerChoice) {
-        return "it's a tie, you both picked " + playerChoice;
+        text.textContent = "It's a tie, you both picked " + playerChoice;
+        result.appendChild(text);
     } else if ((computerChoice === "rock" && playerChoice === "scissors") 
             || (computerChoice === "paper" && playerChoice === "rock") 
             || (computerChoice === "scissors" && playerChoice === "paper")) {
         computerScore++;
-        return "computer wins, " + computerChoice + " beats " + playerChoice;
+        text.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
+        result.appendChild(text);
     } else {
         playerScore++;
-        return "you win, " + playerChoice + " beats " + computerChoice;
+        text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
+        result.appendChild(text);
     }       
 } 
 
@@ -27,7 +33,7 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         let playerSelection = button.id;
         let computerSelection = computerPlay();
-        console.log(playRound(computerSelection, playerSelection));
+        playRound(computerSelection, playerSelection);
     });
 });
 
