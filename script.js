@@ -2,10 +2,12 @@ let computerScore = 0;
 let playerScore = 0;
 
 const result = document.querySelector('#result');
-// adds a div with class 'text' to the 'results div:
+// adds a class for div with class 'text' to later append to 'result' div
 const text = document.createElement('div');
 text.classList.add('text');
-
+// adds class for score div
+const score = document.createElement('div');
+score.classList.add('score');
 
 function computerPlay(weaponOptions) {
     weaponOptions = ["rock", "paper", "scissors"];
@@ -16,18 +18,16 @@ function playRound(computerChoice, playerChoice) {
 
     if (computerChoice === playerChoice) {
         text.textContent = "It's a tie, you both picked " + playerChoice;
-        result.appendChild(text);
     } else if ((computerChoice === "rock" && playerChoice === "scissors") 
             || (computerChoice === "paper" && playerChoice === "rock") 
             || (computerChoice === "scissors" && playerChoice === "paper")) {
         computerScore++;
         text.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
-        result.appendChild(text);
     } else {
         playerScore++;
         text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
-        result.appendChild(text);
-    }       
+    }
+    result.appendChild(text);
 } 
 
 const buttons = document.querySelectorAll('button');
