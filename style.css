@@ -8,7 +8,7 @@ body {
 
 .modal {
     background-color: #e7e0da;
-    height: 80vh;
+    height: 100vh;
     margin: 50px;
     border-radius: 10px;
     border: solid 3px white;
@@ -35,6 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: white;
     margin: 5px 10px;
     border-radius: 5px;
