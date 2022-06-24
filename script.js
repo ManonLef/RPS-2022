@@ -35,16 +35,16 @@ function playRound(computerChoice, playerChoice) {
             text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
             topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
         }
-        
-        score.textContent = "The current score is " + computerScore + " for computer and " + playerScore + " for you.";
         if (computerScore === 5) {
             text.textContent = "COMPUTER WINS! " + computerScore + " to " + playerScore;
             computerScore = 0;
             playerScore = 0;
+            topSection.textContent = "LOST! PICK A WEAPON TO PLAY AGAIN"
         } else if (playerScore === 5) {
             text.textContent = "YOU WIN! " + playerScore + " to " + computerScore;
             computerScore = 0;
             playerScore = 0;
+            topSection.textContent = "WIN! PICK A WEAPON TO PLAY AGAIN"
         }
 } 
 
