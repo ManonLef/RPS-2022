@@ -2,10 +2,10 @@ let computerScore = 0;
 let playerScore = 0;
 
 const result = document.querySelector('#result');
-// adds a class for div with class 'text' to later append to 'result' div
+
 const text = document.createElement('div');
 text.classList.add('text');
-// adds class for score div
+
 const score = document.createElement('div');
 score.classList.add('score');
 
@@ -18,19 +18,20 @@ function computerPlay(weaponOptions) {
 }
 
 function playRound(computerChoice, playerChoice) {
-
-    if (computerChoice === playerChoice) {
-        text.textContent = "It's a tie, you both picked " + playerChoice;
-    } else if ((computerChoice === "rock" && playerChoice === "scissors") 
-            || (computerChoice === "paper" && playerChoice === "rock") 
-            || (computerChoice === "scissors" && playerChoice === "paper")) {
-        computerScore++;
-        text.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
-    } else {
-        playerScore++;
-        text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
-    }
-    score.textContent = "The current score is " + computerScore + " for computer and " + playerScore + " for you."
+        if (computerChoice === playerChoice) {
+            text.textContent = "It's a tie, you both picked " + playerChoice;
+        } else if ((computerChoice === "rock" && playerChoice === "scissors") 
+                || (computerChoice === "paper" && playerChoice === "rock") 
+                || (computerChoice === "scissors" && playerChoice === "paper")) {
+            computerScore++;
+            text.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
+        } else {
+            playerScore++;
+            text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
+        }
+        score.textContent = "The current score is " + computerScore + " for computer and " + playerScore + " for you.";
+        //if (computerScore === 5) {
+        //score.textContent = "Computer wins";}
 } 
 
 const buttons = document.querySelectorAll('button');
@@ -38,9 +39,13 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         let playerSelection = button.id;
         let computerSelection = computerPlay();
-        playRound(computerSelection, playerSelection);
+        
+            playRound(computerSelection, playerSelection);
+        
+        
     });
 });
+
 
 // function game() {
 //     for (let i = 0; i <= 5; i++) {
