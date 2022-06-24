@@ -2,7 +2,7 @@ let computerScore = 0;
 let playerScore = 0;
 
 const topSection = document.querySelector('#topSection')
-topSection.textContent = "PICK YOUR WEAPON OF CHOICE";
+topSection.textContent = "PICK YOUR HANDY WEAPON";
 
 const result = document.querySelector('#result');
 
@@ -29,20 +29,20 @@ function playRound(computerChoice, playerChoice) {
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
             computerScore++;
-            text.textContent = "computer wins this round, " + computerChoice + " beats " + playerChoice;
+            text.textContent = "The computer wins this round, " + computerChoice + " beats " + playerChoice;
             topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
         } else {
             playerScore++;
-            text.textContent = "you win this round, " + playerChoice + " beats " + computerChoice;
+            text.textContent = "You win this round, " + playerChoice + " beats " + computerChoice;
             topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
         }
         if (computerScore === 5) {
-            text.textContent = "COMPUTER WINS! " + computerScore + " to " + playerScore;
+            text.textContent = "COMPUTER WINS THE GAME! " + computerScore + " to " + playerScore;
             computerScore = 0;
             playerScore = 0;
-            topSection.textContent = "YOU LOSE! PICK A WEAPON TO PLAY AGAIN"
+            topSection.textContent = "YOU LOST THE GAME! PICK A WEAPON TO PLAY AGAIN"
         } else if (playerScore === 5) {
-            text.textContent = "YOU WIN! " + playerScore + " to " + computerScore;
+            text.textContent = "YOU WIN THIS GAME! " + playerScore + " to " + computerScore;
             computerScore = 0;
             playerScore = 0;
             topSection.textContent = "YOU WIN! PICK A WEAPON TO PLAY AGAIN"
