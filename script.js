@@ -28,11 +28,11 @@ function playRound(computerChoice, playerChoice) {
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
             computerScore++;
-            text.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
+            text.textContent = "computer wins this round, " + computerChoice + " beats " + playerChoice;
             topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
         } else {
             playerScore++;
-            text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
+            text.textContent = "you win this round, " + playerChoice + " beats " + computerChoice;
             topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
         }
         if (computerScore === 5) {
