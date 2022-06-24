@@ -15,5 +15,12 @@ body {
 }
 
 button {
-    
+  background-color: #c59a5c;
+  border-radius: 3px;
+  border: solid 3px #9e3646;;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px;
+  padding: 8px 16px;
 }
