@@ -55,30 +55,3 @@ buttons.forEach((button) => {
 });
 
 
-// function game() {
-//     for (let i = 0; i <= 5; i++) {
-//         if (i < 5) {
-//             let playerSelection = prompt("What will be your weapon of choice?\nRock, Paper or Scissors?").toLowerCase();
-//             let computerSelection = computerPlay();
-
-//             if (playerSelection === "rock" 
-//                 || playerSelection === "paper" 
-//                 || playerSelection === "scissors") {
-//                 console.log(playRound(computerSelection, playerSelection));
-//             } else {
-//                 i--;
-//                 console.log( "Pick again, but this time only 'rock', 'paper' or 'scissors'");
-//                 continue;
-//             }
-//         } else {
-//             if (computerScore > playerScore) {
-//                 console.log("You lost, Computer score is " + computerScore + " You scored " + playerScore)
-//             } else {
-//                 console.log("You win, Computer score is " + computerScore + " You scored " + playerScore)
-//             }
-//         }
-//     }
-// }
-
-// game();
-
