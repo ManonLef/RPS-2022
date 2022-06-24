@@ -29,9 +29,17 @@ function playRound(computerChoice, playerChoice) {
             playerScore++;
             text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
         }
+        
         score.textContent = "The current score is " + computerScore + " for computer and " + playerScore + " for you.";
-        //if (computerScore === 5) {
-        //score.textContent = "Computer wins";}
+        if (computerScore === 5) {
+            score.textContent = "Computer wins with " + computerScore + " points against your " + playerScore + " points, pick a weapon to play again.";
+            computerScore = 0;
+            playerScore = 0;
+        } else if (playerScore === 5) {
+            score.textContent = "You win with " + playerScore + " points, against " + computerScore + " points for the computer, pick a weapon to play again";
+            computerScore = 0;
+            playerScore = 0;
+        }
 } 
 
 const buttons = document.querySelectorAll('button');
