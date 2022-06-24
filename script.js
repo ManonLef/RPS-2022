@@ -8,6 +8,7 @@ const result = document.querySelector('#result');
 
 const text = document.createElement('div');
 text.classList.add('text');
+text.textContent = "...";
 
 const score = document.createElement('div');
 score.classList.add('score');
