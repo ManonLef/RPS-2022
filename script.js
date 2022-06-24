@@ -39,12 +39,12 @@ function playRound(computerChoice, playerChoice) {
             text.textContent = "COMPUTER WINS! " + computerScore + " to " + playerScore;
             computerScore = 0;
             playerScore = 0;
-            topSection.textContent = "LOST! PICK A WEAPON TO PLAY AGAIN"
+            topSection.textContent = "YOU LOSE! PICK A WEAPON TO PLAY AGAIN"
         } else if (playerScore === 5) {
             text.textContent = "YOU WIN! " + playerScore + " to " + computerScore;
             computerScore = 0;
             playerScore = 0;
-            topSection.textContent = "WIN! PICK A WEAPON TO PLAY AGAIN"
+            topSection.textContent = "YOU WIN! PICK A WEAPON TO PLAY AGAIN"
         }
 } 
 
