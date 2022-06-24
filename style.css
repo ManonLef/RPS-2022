@@ -1,0 +1,14 @@
+body {
+    background-color: #e7e0da;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.modal {
+    background-color: #8b8b82;
+    height: 50vh;
+    margin: 100px;
+    border-radius: 10px;
+    border: solid 3px white;
+
+    display: flex;
+}
