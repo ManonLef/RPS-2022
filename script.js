@@ -22,24 +22,24 @@ function computerPlay(weaponOptions) {
 
 function playRound(computerChoice, playerChoice) {
         if (computerChoice === playerChoice) {
-            text.textContent = "It's a tie, you both picked " + playerChoice;
+            topSection.textContent = "It's a tie, you both picked " + playerChoice;
         } else if ((computerChoice === "rock" && playerChoice === "scissors") 
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
             computerScore++;
-            text.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
+            topSection.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
         } else {
             playerScore++;
-            text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
+            topSection.textContent = "you win, " + playerChoice + " beats " + computerChoice;
         }
         
         score.textContent = "The current score is " + computerScore + " for computer and " + playerScore + " for you.";
         if (computerScore === 5) {
-            score.textContent = "Computer wins with " + computerScore + " points against your " + playerScore + " points, pick a weapon to play again.";
+            topSection.textContent = "COMPUTER WINS! " + computerScore + " to " + playerScore + " pick a weapon to play again";
             computerScore = 0;
             playerScore = 0;
         } else if (playerScore === 5) {
-            score.textContent = "You win with " + playerScore + " points, against " + computerScore + " points for the computer, pick a weapon to play again";
+            topSection.textContent = "YOU WIN! " + playerScore + " to " + computerScore + " pick a weapon to play again";
             computerScore = 0;
             playerScore = 0;
         }
