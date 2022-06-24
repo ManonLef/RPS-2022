@@ -1,17 +1,28 @@
 body {
     background-color: #e7e0da;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: white;
 }
 
 .modal {
     background-color: #8b8b82;
-    height: 50vh;
-    margin: 100px;
+    height: 80vh;
+    margin: 50px;
     border-radius: 10px;
     border: solid 3px white;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: #b8c8cb;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 button {
@@ -23,4 +34,6 @@ button {
   font-weight: 500;
   margin: 10px;
   padding: 8px 16px;
+
+  flex: 1 1 auto;
 }
