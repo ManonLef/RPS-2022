@@ -1,5 +1,5 @@
 body {
-    background-color: #e7e0da;
+    background-color: #b8c8cb;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -7,32 +7,44 @@ body {
 }
 
 .modal {
-    background-color: #8b8b82;
+    background-color: #e7e0da;
     height: 80vh;
     margin: 50px;
     border-radius: 10px;
     border: solid 3px white;
-
     display: flex;
     flex-direction: column;
 }
+
+#topSection {
+    background-color: #FFFFFF;
+    margin: 10px 10px 0px 10px;
+    padding: 30px 10px;
+    border-radius: 5px;
+    color: #9e3646;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+}
+
 #buttons {
     display: flex;
     justify-items: center;
-    background-color: #b8c8cb;
-    margin: 10px;
+    background-color: white;
+    margin: 5px 10px;
     border-radius: 5px;
 }
 
 button {
   background-color: #c59a5c;
   border-radius: 3px;
-  border: solid 2px #9e3646;;
+  border: solid 2px #9e3646;
   color: #FFFFFF;
   font-size: 14px;
-  font-weight: 500;
   font-weight: 900;
   margin: 10px;
   padding: 15px 16px;
   flex: 1 1 auto;
 }
+

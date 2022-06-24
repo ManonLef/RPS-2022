@@ -1,6 +1,9 @@
 let computerScore = 0;
 let playerScore = 0;
 
+const topSection = document.querySelector('#topSection')
+topSection.textContent = "PICK YOUR WEAPON OF CHOICE";
+
 const result = document.querySelector('#result');
 
 const text = document.createElement('div');
