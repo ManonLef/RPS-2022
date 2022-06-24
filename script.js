@@ -22,24 +22,27 @@ function computerPlay(weaponOptions) {
 
 function playRound(computerChoice, playerChoice) {
         if (computerChoice === playerChoice) {
-            topSection.textContent = "It's a tie, you both picked " + playerChoice;
+            text.textContent = "It's a tie, you both picked " + playerChoice;
+            topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
         } else if ((computerChoice === "rock" && playerChoice === "scissors") 
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
             computerScore++;
-            topSection.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
+            text.textContent = "computer wins, " + computerChoice + " beats " + playerChoice;
+            topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
         } else {
             playerScore++;
-            topSection.textContent = "you win, " + playerChoice + " beats " + computerChoice;
+            text.textContent = "you win, " + playerChoice + " beats " + computerChoice;
+            topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
         }
         
         score.textContent = "The current score is " + computerScore + " for computer and " + playerScore + " for you.";
         if (computerScore === 5) {
-            topSection.textContent = "COMPUTER WINS! " + computerScore + " to " + playerScore + " pick a weapon to play again";
+            text.textContent = "COMPUTER WINS! " + computerScore + " to " + playerScore;
             computerScore = 0;
             playerScore = 0;
         } else if (playerScore === 5) {
-            topSection.textContent = "YOU WIN! " + playerScore + " to " + computerScore + " pick a weapon to play again";
+            text.textContent = "YOU WIN! " + playerScore + " to " + computerScore;
             computerScore = 0;
             playerScore = 0;
         }
