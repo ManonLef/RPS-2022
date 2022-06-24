@@ -4,16 +4,20 @@ body {
     margin: 0px;
     padding: 0px;
     color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .modal {
     background-color: #e7e0da;
-    height: 100vh;
-    margin: 50px;
+    margin: 10px;
     border-radius: 10px;
     border: solid 3px white;
     display: flex;
     flex-direction: column;
+    max-height: 500px;
+    max-width: 500px;
 }
 
 #topSection {
