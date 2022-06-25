@@ -55,9 +55,7 @@ buttons.forEach((button) => {
         let playerSelection = button.id;
         let computerSelection = computerPlay();
         
-            playRound(computerSelection, playerSelection);
-        
-        
+        playRound(computerSelection, playerSelection);
     });
 });
 
