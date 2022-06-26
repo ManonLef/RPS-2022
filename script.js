@@ -23,29 +23,29 @@ function computerPlay(weaponOptions) {
 
 function playRound(computerChoice, playerChoice) {
         if (computerChoice === playerChoice) {
-            editText("It's a tie, you both picked " + playerChoice);
-            editTopSection("Computer: " + computerScore + " You: " + playerScore);
+            updateTextContent(text, ("It's a tie, you both picked " + playerChoice));
+            updateTextContent(topSection, ("Computer: " + computerScore + " You: " + playerScore));
         } else if ((computerChoice === "rock" && playerChoice === "scissors") 
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
             computerScore++;
-            editText("The computer wins this round, " + computerChoice + " beats " + playerChoice);
-            editTopSection("Computer: " + computerScore + " You: " + playerScore);
+            updateTextContent(text, "The computer wins this round, " + computerChoice + " beats " + playerChoice);
+            updateTextContent(topSection, "Computer: " + computerScore + " You: " + playerScore);
         } else {
             playerScore++;
-            editText("You win this round, " + playerChoice + " beats " + computerChoice);
-            editTopSection("Computer: " + computerScore + " You: " + playerScore);
+            updateTextContent(text, "You win this round, " + playerChoice + " beats " + computerChoice);
+            updateTextContent(topSection, "Computer: " + computerScore + " You: " + playerScore);
         }
         if (computerScore === 5) {
-            editText("COMPUTER WINS THE GAME! " + computerScore + " to " + playerScore);
+            updateTextContent(text, "COMPUTER WINS THE GAME! " + computerScore + " to " + playerScore);
             computerScore = 0;
             playerScore = 0;
-            editTopSection("YOU LOST THE GAME! PICK A WEAPON TO PLAY AGAIN");
+            updateTextContent(topSection, "YOU LOST THE GAME! PICK A WEAPON TO PLAY AGAIN");
         } else if (playerScore === 5) {
-            editText("YOU WIN THIS GAME! " + playerScore + " to " + computerScore);
+            updateTextContent(text, "YOU WIN THIS GAME! " + playerScore + " to " + computerScore);
             computerScore = 0;
             playerScore = 0;
-            editTopSection("YOU WIN! PICK A WEAPON TO PLAY AGAIN");
+            updateTextContent(topSection, "YOU WIN! PICK A WEAPON TO PLAY AGAIN");
         }
 } 
 
@@ -60,10 +60,6 @@ buttons.forEach((button) => {
 });
 
 
-function editText(output) {
-    text.textContent = (output);
-}
-
-function editTopSection(output) {
-    topSection.textContent = (output);
+function updateTextContent(section, output) {
+    section.textContent = (output);
 }
