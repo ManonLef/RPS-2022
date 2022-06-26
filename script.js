@@ -23,8 +23,8 @@ function computerPlay(weaponOptions) {
 
 function playRound(computerChoice, playerChoice) {
         if (computerChoice === playerChoice) {
-            updateTextContent(text, ("It's a tie, you both picked " + playerChoice));
-            updateTextContent(topSection, ("Computer: " + computerScore + " You: " + playerScore));
+            updateTextContent(text, "It's a tie, you both picked " + playerChoice);
+            updateTextContent(topSection, "Computer: " + computerScore + " You: " + playerScore);
         } else if ((computerChoice === "rock" && playerChoice === "scissors") 
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
