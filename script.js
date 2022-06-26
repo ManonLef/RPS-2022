@@ -23,29 +23,29 @@ function computerPlay(weaponOptions) {
 
 function playRound(computerChoice, playerChoice) {
         if (computerChoice === playerChoice) {
-            text.textContent = "It's a tie, you both picked " + playerChoice;
-            topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
+            editText("It's a tie, you both picked " + playerChoice);
+            editTopSection("Computer: " + computerScore + " You: " + playerScore);
         } else if ((computerChoice === "rock" && playerChoice === "scissors") 
                 || (computerChoice === "paper" && playerChoice === "rock") 
                 || (computerChoice === "scissors" && playerChoice === "paper")) {
             computerScore++;
-            text.textContent = "The computer wins this round, " + computerChoice + " beats " + playerChoice;
-            topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
+            editText("The computer wins this round, " + computerChoice + " beats " + playerChoice);
+            editTopSection("Computer: " + computerScore + " You: " + playerScore);
         } else {
             playerScore++;
-            text.textContent = "You win this round, " + playerChoice + " beats " + computerChoice;
-            topSection.textContent = "Computer: " + computerScore + " You: " + playerScore;
+            editText("You win this round, " + playerChoice + " beats " + computerChoice);
+            editTopSection("Computer: " + computerScore + " You: " + playerScore);
         }
         if (computerScore === 5) {
-            text.textContent = "COMPUTER WINS THE GAME! " + computerScore + " to " + playerScore;
+            editText("COMPUTER WINS THE GAME! " + computerScore + " to " + playerScore);
             computerScore = 0;
             playerScore = 0;
-            topSection.textContent = "YOU LOST THE GAME! PICK A WEAPON TO PLAY AGAIN"
+            editTopSection("YOU LOST THE GAME! PICK A WEAPON TO PLAY AGAIN");
         } else if (playerScore === 5) {
-            text.textContent = "YOU WIN THIS GAME! " + playerScore + " to " + computerScore;
+            editText("YOU WIN THIS GAME! " + playerScore + " to " + computerScore);
             computerScore = 0;
             playerScore = 0;
-            topSection.textContent = "YOU WIN! PICK A WEAPON TO PLAY AGAIN"
+            editTopSection("YOU WIN! PICK A WEAPON TO PLAY AGAIN");
         }
 } 
 
@@ -60,3 +60,10 @@ buttons.forEach((button) => {
 });
 
 
+function editText(output) {
+    text.textContent = (output);
+}
+
+function editTopSection(output) {
+    topSection.textContent = (output);
+}
