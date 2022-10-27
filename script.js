@@ -61,5 +61,14 @@ buttons.forEach((button) => {
 
 
 function updateTextContent(section, output) {
-    section.textContent = (output);
+    section.textContent = "";
+    if (section === text) { 
+        setTimeout(() => {
+            section.textContent = (output);
+        }, 100);
+    } else {
+        setTimeout(() => {
+            section.textContent = (output);
+        }, 10);
+    }
 }
