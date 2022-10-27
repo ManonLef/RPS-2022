@@ -25,4 +25,4 @@ For now I learned a lot more about DOM manipulation and feel more confident abou
 - [ ] A more fancy UI, possibly including images
 - [ ] Updated `updateTextContent` function
 - [ ] Round counter to make it more obvious when two rounds in a row tie with the same selection as the previous round. 
-- [ ] An quick fade out and fade in to achieve the above
+- [x] An quick fade out and fade in to achieve the above
